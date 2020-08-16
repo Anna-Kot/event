@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+}
+p {
+    margin-bottom: 15px;
+}
+h3 {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    color: rgb(78, 78, 78);
+}
+span {
+    padding-top: 7px;
+}
+.container {
+    width: 81%;
+    margin: 0 auto;
+}
+#form_but {
+    margin-bottom: 10px; 
+    /* second блок з кнопками table i list */
+}
+.block {
+    /* властивості для блоків основного, edit/style та таблиця/список */
+    min-height: 250px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);
+    background-color: rgb(231, 229, 229);
+    margin: 10px 0;
+    padding: 20px;
+    position: relative;
+}
+.top_block {
+    padding-left: 30px;
+}
+.btn_edit, .btn_style,.btn_add, .btn_save, .btn_create_list, .btn_create_table {
+    border-radius: 4px; 
+    border: none; 
+    width: 65px; 
+    height: 35px;
+    font-size: 16px ;
+    margin-right: 6px;
+    box-shadow:0 0 1px 1px rgba(0,0,0,0.3) ;
+    outline: none;
+    cursor: pointer;
+    /* загальні властивості для всіх button */
+    
+}
+.btn_edit {
+    background-color: rgb(240, 178, 45); 
+}
+.btn_style {
+    background-color: rgb(25, 147, 168);
+    color: white;
+}
+.btn_add {
+    margin-top: 10px;
+    background-color:rgb(211, 30, 30)
+}
+.btn_add:hover {
+    background-color:rgb(192, 26, 26)
+}
+.btn_save, .btn_create_list, .btn_create_table {
+    background-color:rgb(32, 160, 32)
+}.btn_save:hover, .btn_create_list:hover, .btn_create_table:hover {
+    background-color:rgb(32, 146, 32)
+}
+.btn_create_list, .btn_create_table {
+    margin-top: 20px;
+    width: 110px;
+    color: rgb(240, 239, 239);
+}
+.btn_text_color, .btn_bg_color {
+    height: 35px;
+    background-color: rgb(117, 116, 116);
+    border: 1px solid rgb(100, 99, 99);
+    border-radius: 3px;
+    color: rgb(238, 238, 238);
+    padding-left:13px;
+    padding-right: 13px;
+    font-size: 16px;
+    outline: none;
+}
+.btn_text_color:active, .btn_bg_color:active {
+    background-color: rgb(80, 80, 80);
+}
+/* властивості у формі з 2 checkbox (style) */
+.form_style {
+    color:  rgb(58, 58, 58);
+    /* колір тексту для checkbox bold i cursive (в style) */
+}
+.form_style > input[type="checkbox"] {
+    margin-right: 7px;
+
+} 
+.form_style > span {
+    margin-right: 10px;
+}
+
+/*форма з fontSize (style)  */
+.form_size > input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+}
+.form_size > span {
+    margin-right: 12px;
+    padding: 0;
+    color:  rgb(58, 58, 58)
+}
+#fontFamily {
+    height: 35px;
+    width: 40%;
+    color: rgb(83, 83, 83);
+    /* selector для вибору типу шрифта для основного блоку (style) */
+}
+
+form[name="style"] {
+    padding-left: 15px;
+}
+.center_block {
+    display: flex;
+    justify-content: center;
+    /* для кнопок edit i style */
+}
+.edit_block, .style_block {
+    display: none;
+    /* по замовчуванню для вікон edit i style */
+}
+input[type="text"], select {
+    outline: none;
+    border: 1px solid rgb(175, 174, 174);
+    border-radius: 5px;
+}
+.edit_area:focus, select:focus, input[type="text"]:focus {
+    border: 2px solid rgb(101, 202, 219);
+    box-shadow : 0 0 1px 2px rgb(141, 229, 245);
+    border-radius: 5px;
+    /* fosuc для всіх текстових полів та select i textarea */
+}
+.edit_area {
+    width: 100%;
+    height: 145px;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /* поле для корегування (edit)*/
+
+}
+.colors {
+    width: 210px;
+    height: auto;
+    outline: 1px solid black;
+    position: absolute;
+    top: 20px;
+    right: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* блок з кольорами (style) */
+}
+.color_box {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    /* розміри кожного елемента у блоці з кольорами (style) */
+}
+@media screen and (max-width: 768px){
+    .colors {
+        width: 150px;
+        right: 2%;
+    }
+    .color_box {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 650px){
+    .colors {
+        width: 90px;
+        right: 1%;
+        top: 40%
+    }
+    .color_box {
+        width: 30px;
+        height: 30px;
+    }
+}
+.width_text {
+    width: 81.6%;
+    height: 35px;
+    padding-left: 7px;
+    /* спільні властивості для input type="text i select у table i list */
+}
+.bor {
+    height: 35px;
+    width: 80px;
+    padding-left: 7px;
+    color: rgb(83, 83, 83);
+    /* спільні властивості для трьох параметрів у таблиця про border (table) */
+}
+.n {
+    color: rgb(83, 83, 83);
+    /* колір тексту у select при виборі форми маркера у ul (в list) */
+}
+
+.border {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* клас для lable. (table border)  */
+}
+label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12px ;
+}
+.silver {
+    color: rgb(83, 83, 83);
+    font-size: 18px;
+    /* клас для span тексту до полів (table i list) */
+}
+
+.outline {
+    border: 2px solid rgb(17, 144, 153);
+}
+.bold {
+    font-weight: bold;
+}
+.cursive {
+    font-style: italic;
+}
+.first, .second {
+    display: none;
+}
+.hide {
+    display: none;  
+  }
+.show {
+    display: block;
+}
